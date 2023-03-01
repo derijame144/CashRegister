@@ -16,7 +16,7 @@ namespace CashRegister
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new greyLabel2());
+            Application.Run(new page());
         }
     }
 }

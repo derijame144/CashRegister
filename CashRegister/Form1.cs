@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CashRegister
 {
-    public partial class greyLabel2 : Form
+    public partial class page : Form
     {
         double mini;
         double big;
@@ -25,11 +26,16 @@ namespace CashRegister
         double tax;
         double total;
         double change;
+        double tendered;
+        bool receipt = false;
+        bool calculate = false;
 
-        public greyLabel2()
+         
+
+        public page()
         {
             InitializeComponent();
-        }
+        } 
 
         private void totaltaxLabel_Click(object sender, EventArgs e)
         {
@@ -45,6 +51,27 @@ namespace CashRegister
         {
             try
             {
+
+                if (miniInput.Text == "")
+                {
+                    miniInput.Text = "0";
+                }
+
+                if (bigInput.Text == "")
+                {
+                    bigInput.Text = "0";
+                }
+
+                if (slurpInput.Text == "")
+                {
+                    slurpInput.Text = "0";
+                }
+
+                if (chugInput.Text == "")
+                {
+                    chugInput.Text = "0";
+                }
+
                 //makes sure error label isnt visible
                 errorLabel.Visible = false;
 
@@ -67,6 +94,9 @@ namespace CashRegister
                 subOutput.Text = $"{subTotal.ToString("C")}";
                 taxOutput.Text = $"{tax.ToString("C")}";
                 totalOutput.Text = $"{total.ToString("C")}";
+
+                changeButton.BackColor = Color.Turquoise;
+                calculate = true; 
             }
             catch
             {
@@ -83,19 +113,33 @@ namespace CashRegister
         {
             try
             {
+                SoundPlayer laughSound = new SoundPlayer(Properties.Resources.HAHAHAHAHA);
                 errorLabel.Visible = false;
 
-                if (Convert.ToDouble(tenderedIntput.Text) > total)
+                if (calculate == true)
                 {
-                    change = Convert.ToDouble(tenderedIntput.Text) - total;
+                    if (tenderedIntput.Text == "")
+                    {
+                        tenderedIntput.Text = "0";
+                    }
 
-                    changeOutput.Text = $"{change.ToString("C")}";
+                    if (Convert.ToDouble(tenderedIntput.Text) >= total)
+                    {
+                        tendered = Convert.ToDouble(tenderedIntput.Text);
+                        change = tendered - total;
 
-                }
+                        changeOutput.Text = $"{change.ToString("C")}";
+                        receipt = true;
+                        receiptButton.BackColor = Color.Turquoise;
+                       
+                    }
 
-                else
-                {
-                    changeOutput.Text = "hahaha";
+
+                    else
+                    {
+                        laughSound.Play();
+                        changeOutput.Text = "hahaha";
+                    }
                 }
             }
             catch
@@ -106,52 +150,92 @@ namespace CashRegister
 
         private void receiptLabel_Click(object sender, EventArgs e)
         {
-            greyBox1.Visible = true;
-            greyBox2.Visible = true;
-            greyBox3.Visible = true;
-            greyBox4.Visible = true;
-            greyBox5.Visible = true;
-            blackBar.Visible = true;
-            priceLabel.Visible = true;
-            itemLabel.Visible = true;
-            receiptOutput.Visible = true;
+            if (receipt == true)
+            {
+                greyBox1.Visible = true;
+                greyBox2.Visible = true;
+                greyBox3.Visible = true;
+                greyBox4.Visible = true;
+                greyBox5.Visible = true;
+                blackBar.Visible = true;
+                priceLabel.Visible = true;
+                itemLabel.Visible = true;
+                receiptOutput.Visible = true;
 
-            //Printing stuff
-            receiptOutput.Text = $"\n\nFortnite Shop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Thanks for shopping";
-            itemLabel.Text = $"{mini} Minis\n\n{big} Big Pots\n\n{slurp} Slurp Juices\n\n{chug} Chug Jugs";
-            priceLabel.Text = $"@     $5.25\n\n@     $10.50\n\n@     $16.00\n\n@     $20.00";
-            itemLabel.Text += $"\n\n\n\nSub Total:\n\nTotal Tax:\n\nTotal:\n\nTendered:\n\nChange;";
-            priceLabel.Text += $"\n\n\n\n{subTotal}\n\n{tax}\n\n{total}\n\n{tenderedIntput.Text}\n\n{change}";
+                //Printing stuff
+                receiptOutput.Text = $"\nFortnite Shop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Thanks for shopping";
+                itemLabel.Text = $"{mini} Minis\n\n{big} Big Pots\n\n{slurp} Slurp Juices\n\n{chug} Chug Jugs";
+                priceLabel.Text = $"@     $5.25\n\n@     $10.50\n\n@     $16.00\n\n@     $20.00";
+                itemLabel.Text += $"\n\n\n\nSub Total:\n\nTotal Tax:\n\nTotal:\n\nTendered:\n\nChange;";
+                priceLabel.Text += $"\n\n\n\n        {subTotal.ToString("C")}\n\n        {tax.ToString("C")}\n\n        {total.ToString("C")}\n\n        {tendered.ToString("C")}\n\n        {change.ToString("C")}";
 
-            
-            Thread.Sleep(1500);
-            Refresh();
+                SoundPlayer printSound = new SoundPlayer(Properties.Resources.Printersound);
+                printSound.Play();
 
+                Refresh();
+                Thread.Sleep(1300);
+
+
+                greyBox1.Visible = false;
+
+                Refresh();
+                Thread.Sleep(1300);
+
+                greyBox2.Visible = false;
+
+                Refresh();
+                Thread.Sleep(1300);
+
+                greyBox3.Visible = false;
+
+                Refresh();
+                Thread.Sleep(1300);
+
+                greyBox4.Visible = false;
+
+                Refresh();
+                Thread.Sleep(1300);
+
+                greyBox5.Visible = false;
+
+                Refresh();
+                Thread.Sleep(1300);
+
+                resetButton.Visible = true;
+            }
+
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            //makes receipt 
             greyBox1.Visible = false;
-
-            Thread.Sleep(1000);
-            Refresh();
-
             greyBox2.Visible = false;
-
-            Thread.Sleep(990);
-            Refresh();
-
             greyBox3.Visible = false;
-
-            Thread.Sleep(1000);
-            Refresh();
-
-            greyBox4.Visible = false;
-
-            Thread.Sleep(800);
-            Refresh();
-
+            greyBox4.Visible =  false;
             greyBox5.Visible = false;
+            blackBar.Visible = false;
+            priceLabel.Visible = false;
+            itemLabel.Visible = false;
+            receiptOutput.Visible = false;
+            resetButton.Visible = false;
 
-            Thread.Sleep(1300);
-            Refresh();
+            // reset texts
+            miniInput.Text = "";
+            bigInput.Text = "";
+            slurpInput.Text = "";
+            chugInput.Text = "";
+            subOutput.Text = "";
+            taxOutput.Text = "";
+            totalOutput.Text = "";
+            tenderedIntput.Text = "";
+            changeOutput.Text = "";
 
+            receipt = false;
+            calculate = false;
+
+            receiptButton.BackColor = Color.LightBlue;
+            changeButton.BackColor = Color.LightBlue;
         }
     }
 }

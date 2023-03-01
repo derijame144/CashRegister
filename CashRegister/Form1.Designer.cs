@@ -1,6 +1,6 @@
 ﻿namespace CashRegister
 {
-    partial class greyLabel2
+    partial class page
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(page));
             this.titleLabel = new System.Windows.Forms.Label();
             this.miniLabel = new System.Windows.Forms.Label();
             this.bigLabel = new System.Windows.Forms.Label();
@@ -61,6 +62,7 @@
             this.greyBox3 = new System.Windows.Forms.Label();
             this.greyBox4 = new System.Windows.Forms.Label();
             this.greyBox5 = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -78,6 +80,7 @@
             // miniLabel
             // 
             this.miniLabel.AutoSize = true;
+            this.miniLabel.BackColor = System.Drawing.Color.Violet;
             this.miniLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.miniLabel.Location = new System.Drawing.Point(33, 124);
             this.miniLabel.Name = "miniLabel";
@@ -88,6 +91,7 @@
             // bigLabel
             // 
             this.bigLabel.AutoSize = true;
+            this.bigLabel.BackColor = System.Drawing.Color.Violet;
             this.bigLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bigLabel.Location = new System.Drawing.Point(33, 183);
             this.bigLabel.Name = "bigLabel";
@@ -98,6 +102,7 @@
             // slurpLabel
             // 
             this.slurpLabel.AutoSize = true;
+            this.slurpLabel.BackColor = System.Drawing.Color.Violet;
             this.slurpLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slurpLabel.Location = new System.Drawing.Point(33, 241);
             this.slurpLabel.Name = "slurpLabel";
@@ -108,6 +113,7 @@
             // chugLabel
             // 
             this.chugLabel.AutoSize = true;
+            this.chugLabel.BackColor = System.Drawing.Color.Violet;
             this.chugLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chugLabel.Location = new System.Drawing.Point(33, 297);
             this.chugLabel.Name = "chugLabel";
@@ -166,6 +172,7 @@
             // subtotalLabel
             // 
             this.subtotalLabel.AutoSize = true;
+            this.subtotalLabel.BackColor = System.Drawing.Color.Violet;
             this.subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalLabel.Location = new System.Drawing.Point(33, 472);
             this.subtotalLabel.Name = "subtotalLabel";
@@ -176,6 +183,7 @@
             // taxLabel
             // 
             this.taxLabel.AutoSize = true;
+            this.taxLabel.BackColor = System.Drawing.Color.Violet;
             this.taxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxLabel.Location = new System.Drawing.Point(33, 541);
             this.taxLabel.Name = "taxLabel";
@@ -186,6 +194,7 @@
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
+            this.totalLabel.BackColor = System.Drawing.Color.Violet;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLabel.Location = new System.Drawing.Point(33, 600);
             this.totalLabel.Name = "totalLabel";
@@ -233,6 +242,7 @@
             // ternderedLabel
             // 
             this.ternderedLabel.AutoSize = true;
+            this.ternderedLabel.BackColor = System.Drawing.Color.Violet;
             this.ternderedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ternderedLabel.Location = new System.Drawing.Point(33, 695);
             this.ternderedLabel.Name = "ternderedLabel";
@@ -250,7 +260,7 @@
             // 
             // changeButton
             // 
-            this.changeButton.BackColor = System.Drawing.Color.Turquoise;
+            this.changeButton.BackColor = System.Drawing.Color.LightBlue;
             this.changeButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.changeButton.FlatAppearance.BorderSize = 2;
             this.changeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -267,6 +277,7 @@
             // changeLabel
             // 
             this.changeLabel.AutoSize = true;
+            this.changeLabel.BackColor = System.Drawing.Color.Violet;
             this.changeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeLabel.Location = new System.Drawing.Point(36, 829);
             this.changeLabel.Name = "changeLabel";
@@ -288,7 +299,7 @@
             this.receiptOutput.BackColor = System.Drawing.Color.White;
             this.receiptOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.receiptOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptOutput.Location = new System.Drawing.Point(546, 117);
+            this.receiptOutput.Location = new System.Drawing.Point(542, 103);
             this.receiptOutput.Name = "receiptOutput";
             this.receiptOutput.Size = new System.Drawing.Size(420, 749);
             this.receiptOutput.TabIndex = 23;
@@ -298,6 +309,7 @@
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
+            this.errorLabel.BackColor = System.Drawing.Color.Violet;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
             this.errorLabel.Location = new System.Drawing.Point(291, 83);
@@ -309,7 +321,7 @@
             // 
             // receiptButton
             // 
-            this.receiptButton.BackColor = System.Drawing.Color.Turquoise;
+            this.receiptButton.BackColor = System.Drawing.Color.LightBlue;
             this.receiptButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.receiptButton.FlatAppearance.BorderSize = 2;
             this.receiptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -328,7 +340,7 @@
             this.itemLabel.AutoSize = true;
             this.itemLabel.BackColor = System.Drawing.Color.White;
             this.itemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemLabel.Location = new System.Drawing.Point(567, 290);
+            this.itemLabel.Location = new System.Drawing.Point(563, 276);
             this.itemLabel.Name = "itemLabel";
             this.itemLabel.Size = new System.Drawing.Size(35, 25);
             this.itemLabel.TabIndex = 26;
@@ -340,7 +352,7 @@
             this.priceLabel.AutoSize = true;
             this.priceLabel.BackColor = System.Drawing.Color.White;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceLabel.Location = new System.Drawing.Point(802, 290);
+            this.priceLabel.Location = new System.Drawing.Point(798, 276);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(35, 25);
             this.priceLabel.TabIndex = 27;
@@ -350,7 +362,7 @@
             // blackBar
             // 
             this.blackBar.BackColor = System.Drawing.Color.Black;
-            this.blackBar.Location = new System.Drawing.Point(577, 481);
+            this.blackBar.Location = new System.Drawing.Point(573, 467);
             this.blackBar.Name = "blackBar";
             this.blackBar.Size = new System.Drawing.Size(350, 10);
             this.blackBar.TabIndex = 28;
@@ -361,7 +373,7 @@
             // 
             this.greyBox1.BackColor = System.Drawing.Color.Silver;
             this.greyBox1.ForeColor = System.Drawing.Color.Silver;
-            this.greyBox1.Location = new System.Drawing.Point(546, 117);
+            this.greyBox1.Location = new System.Drawing.Point(542, 103);
             this.greyBox1.Name = "greyBox1";
             this.greyBox1.Size = new System.Drawing.Size(420, 115);
             this.greyBox1.TabIndex = 29;
@@ -372,7 +384,7 @@
             // 
             this.greyBox2.BackColor = System.Drawing.Color.Silver;
             this.greyBox2.ForeColor = System.Drawing.Color.Silver;
-            this.greyBox2.Location = new System.Drawing.Point(546, 232);
+            this.greyBox2.Location = new System.Drawing.Point(542, 218);
             this.greyBox2.Name = "greyBox2";
             this.greyBox2.Size = new System.Drawing.Size(420, 166);
             this.greyBox2.TabIndex = 30;
@@ -383,7 +395,7 @@
             // 
             this.greyBox3.BackColor = System.Drawing.Color.Silver;
             this.greyBox3.ForeColor = System.Drawing.Color.Silver;
-            this.greyBox3.Location = new System.Drawing.Point(546, 371);
+            this.greyBox3.Location = new System.Drawing.Point(542, 362);
             this.greyBox3.Name = "greyBox3";
             this.greyBox3.Size = new System.Drawing.Size(420, 192);
             this.greyBox3.TabIndex = 31;
@@ -394,7 +406,7 @@
             // 
             this.greyBox4.BackColor = System.Drawing.Color.Silver;
             this.greyBox4.ForeColor = System.Drawing.Color.Silver;
-            this.greyBox4.Location = new System.Drawing.Point(546, 501);
+            this.greyBox4.Location = new System.Drawing.Point(542, 487);
             this.greyBox4.Name = "greyBox4";
             this.greyBox4.Size = new System.Drawing.Size(420, 192);
             this.greyBox4.TabIndex = 32;
@@ -405,19 +417,38 @@
             // 
             this.greyBox5.BackColor = System.Drawing.Color.Silver;
             this.greyBox5.ForeColor = System.Drawing.Color.Silver;
-            this.greyBox5.Location = new System.Drawing.Point(546, 674);
+            this.greyBox5.Location = new System.Drawing.Point(542, 660);
             this.greyBox5.Name = "greyBox5";
             this.greyBox5.Size = new System.Drawing.Size(420, 192);
             this.greyBox5.TabIndex = 33;
             this.greyBox5.Text = "hello";
             this.greyBox5.Visible = false;
             // 
-            // greyLabel2
+            // resetButton
+            // 
+            this.resetButton.BackColor = System.Drawing.Color.Turquoise;
+            this.resetButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.resetButton.FlatAppearance.BorderSize = 2;
+            this.resetButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.resetButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.resetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetButton.Location = new System.Drawing.Point(542, 869);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(420, 68);
+            this.resetButton.TabIndex = 34;
+            this.resetButton.Text = "New Order";
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Visible = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
+            // page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.ClientSize = new System.Drawing.Size(1012, 1010);
+            this.BackgroundImage = global::CashRegister.Properties.Resources.fortnite;
+            this.ClientSize = new System.Drawing.Size(1007, 979);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.greyBox5);
             this.Controls.Add(this.greyBox4);
             this.Controls.Add(this.greyBox3);
@@ -451,8 +482,10 @@
             this.Controls.Add(this.bigLabel);
             this.Controls.Add(this.miniLabel);
             this.Controls.Add(this.titleLabel);
-            this.Name = "greyLabel2";
-            this.Text = "IDK what to call u yet";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "page";
+            this.Text = "Fortnite shop";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,6 +526,7 @@
         private System.Windows.Forms.Label greyBox3;
         private System.Windows.Forms.Label greyBox4;
         private System.Windows.Forms.Label greyBox5;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 

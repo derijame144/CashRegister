@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printersound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4f0e5d10-b478-11ed-81a7-e79f6d9bd515.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Receipt Printer - Sound Effect HD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sitcom Laughter Applause - Gaming Sound Effect %28HD%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battlebus2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fortnite.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
